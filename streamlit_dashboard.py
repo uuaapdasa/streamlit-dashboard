@@ -85,26 +85,6 @@ plt.xticks(rotation=45, fontsize=12)  # 让地区名称更清晰
 plt.yticks(fontsize=12)
 st.pyplot(fig)
 
-# 渠道销售额分布（新增）
-st.header("渠道销售额分布")
-# 假设数据中有一个 '渠道' 列
-channel_sales = filtered_data.groupby("渠道")["销售额"].sum()
-
-# 我们可以用柱状图显示渠道的销售额
-fig, ax = plt.subplots(figsize=(12, 6))
-ax.bar(channel_sales.index, channel_sales.values, color='lightcoral')
-ax.set_title("渠道销售额分布", fontsize=16)
-ax.set_xlabel("渠道", fontsize=14)
-ax.set_ylabel("销售额 (元)", fontsize=14)  # 添加单位
-
-# 为每个条形图添加销售额数值
-for i, value in enumerate(channel_sales.values):
-    ax.text(i, value + 10, f'{value:.2f} 元', ha='center', va='bottom', fontsize=12)
-
-plt.xticks(rotation=45, fontsize=12)  # 让渠道名称更清晰
-plt.yticks(fontsize=12)
-st.pyplot(fig)
-
 # 数据表格展示
 st.header("数据预览")
 st.dataframe(filtered_data)
