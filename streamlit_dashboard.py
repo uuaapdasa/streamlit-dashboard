@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 
-# 设置 Matplotlib 的字体为支持中文的字体
-matplotlib.rcParams['font.sans-serif'] = ['SimHei']  # 设置字体为 SimHei（黑体）
+# 尝试使用常见的中文字体
+matplotlib.rcParams['font.sans-serif'] = ['Arial Unicode MS', 'SimHei', 'Microsoft YaHei', 'STSong']  # 选择适合的字体
 matplotlib.rcParams['axes.unicode_minus'] = False  # 解决负号显示为方块的问题
 
 # 加载数据
