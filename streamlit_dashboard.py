@@ -3,6 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 
+# 强制 Streamlit 使用中文字体
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 # 设置 Matplotlib 的字体为支持中文的字体
 matplotlib.rcParams['font.sans-serif'] = ['SimHei']  # 设置字体为 SimHei（黑体）
 matplotlib.rcParams['axes.unicode_minus'] = False  # 解决负号显示为方块的问题
