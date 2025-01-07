@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
+from PIL import ImageFont
+
+# 设置字体路径（确保 SimHei.ttf 文件上传到项目目录下）
+font_path = "assets/fonts/SimHei.ttf"
+font = ImageFont.truetype(font_path, size=12)
 
 # 设置 Matplotlib 的字体为支持中文的字体
 matplotlib.rcParams['font.sans-serif'] = ['SimHei']  # 设置字体为 SimHei（黑体）
