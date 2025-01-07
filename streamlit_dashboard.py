@@ -2,18 +2,10 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
-from PIL import ImageFont
-
-# 设置字体路径（确保 SimHei.ttf 文件上传到项目目录下）
-font_path = "assets/fonts/SimHei.ttf"
-font = ImageFont.truetype(font_path, size=12)
 
 # 设置 Matplotlib 的字体为支持中文的字体
 matplotlib.rcParams['font.sans-serif'] = ['SimHei']  # 设置字体为 SimHei（黑体）
 matplotlib.rcParams['axes.unicode_minus'] = False  # 解决负号显示为方块的问题
-
-# 使用 Pillow 渲染文字
-font = ImageFont.truetype("SimHei.ttf", size=12)
 
 # 加载数据
 data = pd.read_csv("ecommerce_data.csv", parse_dates=["日期"])
@@ -116,3 +108,4 @@ st.pyplot(fig)
 # 数据表格展示
 st.header("数据预览")
 st.dataframe(filtered_data)
+
