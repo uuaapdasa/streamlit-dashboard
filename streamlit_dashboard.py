@@ -7,6 +7,9 @@ import matplotlib
 matplotlib.rcParams['font.sans-serif'] = ['SimHei']  # 设置字体为 SimHei（黑体）
 matplotlib.rcParams['axes.unicode_minus'] = False  # 解决负号显示为方块的问题
 
+# 使用 Pillow 渲染文字
+font = ImageFont.truetype("SimHei.ttf", size=12)
+
 # 加载数据
 data = pd.read_csv("ecommerce_data.csv", parse_dates=["日期"])
 
